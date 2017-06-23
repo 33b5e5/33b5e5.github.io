@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Hello World
-date: 2017-06-22 14:30:00
+date: 2017-06-22 14:30:00 -0700
 tags: hello world test
 ---
 
