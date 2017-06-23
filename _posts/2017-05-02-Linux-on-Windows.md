@@ -1,6 +1,7 @@
 ---
 layout: default
 title: How To Install Linux on Windows 10
+date: 2017-05-02 16:20:42 -0700
 ---
 
 Here’s the easy, distilled way to install Microsoft’s new Linux subsystem for Windows 10. 
