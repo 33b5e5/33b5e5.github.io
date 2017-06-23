@@ -9,7 +9,7 @@ layout: default
       <div class="entry">
         {{ post.content }}
       </div>
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">permalink: {{ site.url }}{{ post.url }}</a>
+      <p>permalink: <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">{{ site.url }}{{ post.url }}</a></p>
       <p/><br/>
     </article>
   {% endfor %}
