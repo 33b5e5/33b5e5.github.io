@@ -9,4 +9,4 @@ This method utilizes Canonical’s “Ubuntu on Windows” image which provides 
 
 Enable “Developer Mode” under Settings > Update & Security > For Developers.
 
-!(https://github.com/33b5e5/33b5e5.github.io/raw/master/_images/low1.png)
+![low1.png](https://github.com/33b5e5/33b5e5.github.io/raw/master/_images/low1.png)
