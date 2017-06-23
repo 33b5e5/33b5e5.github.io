@@ -2,7 +2,6 @@ theme: jekyll-theme-minimal
 title: 33b5e5
 name: 33b5e5
 description: Building apps. Playing music. Hacking things. Shouting into the ether.
-baseurl: ""
 url: https://33b5e5.com
 github_username: 33b5e5
 show_downloads: false
