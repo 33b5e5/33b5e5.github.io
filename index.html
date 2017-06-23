@@ -6,7 +6,7 @@ layout: default
   {% for post in site.posts %}
     <article class="post">
       <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-      <p><small>{{ post.date }}</small></p>
+      <small><a href="{{ site.baseurl }}{{ post.url }}">{{ post.date }}</a></small>
       <div class="entry">
         {{ post.content }}
       </div>
