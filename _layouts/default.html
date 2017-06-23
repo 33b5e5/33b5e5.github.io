@@ -34,13 +34,12 @@
         {% endif %}
       </header>
       
-      <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
-      <small><a href="{{ site.baseurl }}{{ page.url }}">{{ page.date | date: "%Y/%m/%d @ %R" }}</a></small>
       <section>
-
-      {{ content }}
-
+        <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+        <small><a href="{{ site.baseurl }}{{ page.url }}">{{ page.date | date: "%Y/%m/%d @ %R" }}</a></small> 
+        {{ content }}
       </section>
+      
       <footer>
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
