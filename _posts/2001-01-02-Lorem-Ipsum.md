@@ -1,3 +1,9 @@
+---
+layout: default
+title: Lorem Ipsum
+date: 2001-01-02 01:23:45 -0700
+---
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mattis erat, ac vestibulum diam. Vestibulum efficitur sapien vel dolor efficitur consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eu ligula ut velit imperdiet malesuada malesuada id dolor. Donec et justo non velit bibendum ornare. Suspendisse suscipit mauris sit amet semper varius. Quisque nec libero et ligula congue sollicitudin. Nunc tincidunt posuere nisi, et sollicitudin metus. Donec molestie odio a pellentesque facilisis.
 
 Curabitur placerat, enim non euismod tempor, ex nisi cursus erat, non scelerisque velit tellus sit amet eros. Donec quis risus quis dolor pharetra mattis. Nam mattis at mauris eu maximus. Pellentesque sollicitudin metus turpis, in blandit libero posuere ut. Donec tristique augue augue, sed hendrerit urna condimentum at. Ut sagittis euismod est eget eleifend. Phasellus eros magna, pharetra in ex a, tincidunt blandit arcu. In sagittis turpis sed sem scelerisque, vel feugiat tortor accumsan. Etiam sed odio vel neque bibendum scelerisque ac vel odio. Praesent placerat bibendum convallis.
