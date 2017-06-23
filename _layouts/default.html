@@ -34,8 +34,8 @@
         {% endif %}
       </header>
       
-      <h2><a href="{{ site.baseurl }}{{ url }}">{{ title }}</a></h2>
-      <small><a href="{{ site.baseurl }}{{ url }}">{{ date | date: "%Y/%m/%d @ %R" }}</a></small>
+      <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+      <small><a href="{{ site.baseurl }}{{ page.url }}">{{ page.date | date: "%Y/%m/%d @ %R" }}</a></small>
       <section>
 
       {{ content }}
