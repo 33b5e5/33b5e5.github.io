@@ -9,7 +9,7 @@ layout: default
       <div class="entry">
         {{ post.content }}
         <small><a href="{{ site.baseurl }}post.url">permalink</a> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.date }}</a></small>
-        <small>tags: {{ post.tags }}</small>
+        <small>tags: {% for tag in post.tags %}{{ post.tag }} {% endfor %}</small>
       </div>
       <p/><br/>
     </article>
