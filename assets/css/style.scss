@@ -3,10 +3,22 @@
 
 @import "{{ site.theme }}";
 
+h1, h2, h3, h4, h5, h6 {
+  color:#669900;
+}
+
 a {
   color:#33b5e5;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color:#669900;
+a:hover, a:focus {
+  color:#0099cc;
+}
+
+a small {
+  color:#33b5e5;
+}
+
+a:hover small {
+  color:#0099cc;
 }
