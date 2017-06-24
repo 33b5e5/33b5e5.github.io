@@ -8,7 +8,9 @@ date: 2015-06-10 16:20:42 -0700
 
 Gigabit fiber. :)
 
-I replaced the standard CenturyLink router with this guy: [https://www.ubnt.com/edgemax/edgerouter-lite/](https://www.ubnt.com/edgemax/edgerouter-lite/)
+I replaced the standard CenturyLink router with this guy:
+
+[https://www.ubnt.com/edgemax/edgerouter-lite/](https://www.ubnt.com/edgemax/edgerouter-lite/)
 
 I'm pleased with it so far especially for the price ($95 on Amazon). It's kicking ass and outperforming CenturyLink's stock router.
 
