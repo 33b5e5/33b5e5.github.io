@@ -8,7 +8,7 @@ I recently picked up a [Baofeng BF-F8HP from Amazon](http://a.co/2Bi5GBK). It's 
 
 Interestingly it also has the ability to transmit "touch tones" (DTMF) using the keypad. This is likely how the air-raid sirens were hacked in Dallas:
 
-[Hacking blamed for emergency sirens blaring across Dallas early Saturday](https://www.dallasnews.com/news/dallas/2017/04/08/emergency-sirens-blare-across-dallas-county-despite-clear-weather)  
+<a href="https://www.dallasnews.com/news/dallas/2017/04/08/emergency-sirens-blare-across-dallas-county-despite-clear-weather" target="_blank">Hacking blamed for emergency sirens blaring across Dallas</a>
 
 The hack is reminiscent of Captain Crunch and an older era of analog hacking, but is still relevant because we rely on analog RF signals for emergency communications and infrastructure.
 
