@@ -4,13 +4,13 @@ title: Gigabit Fiber
 date: 2015-06-10 16:20:42 -0700
 ---
 
-![gigabits.jpg](https://github.com/33b5e5/33b5e5.github.io/raw/master/_images/gigabits.jpg)
+![gigabits.jpg](https://raw.githubusercontent.com/33b5e5/33b5e5.github.io/master/_images/gigabits.jpg)
 
 Gigabit fiber. :)
 
 I replaced the standard CenturyLink router with this guy:
 
-[https://www.ubnt.com/edgemax/edgerouter-lite/](https://www.ubnt.com/edgemax/edgerouter-lite/)
+<a href="https://www.ubnt.com/edgemax/edgerouter-lite/" target="_blank">https://www.ubnt.com/edgemax/edgerouter-lite/</a>
 
 I'm pleased with it so far especially for the price ($95 on Amazon). It's kicking ass and outperforming CenturyLink's stock router.
 
