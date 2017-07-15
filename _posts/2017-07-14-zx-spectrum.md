@@ -12,4 +12,4 @@ date: 2017-07-14 23:27:42 -0700
 
 <p><br/></p>
 
-The <a href="https://en.wikipedia.org/wiki/ZX_Spectrum" target="_blank">ZX Spectrum</a> "is an 8-bit personal home computer released in the United Kingdom in 1982 by Sinclair Research. It was manufactured in Dundee, Scotland, in the now closed Timex factory."
+*The <a href="https://en.wikipedia.org/wiki/ZX_Spectrum" target="_blank">ZX Spectrum</a> is an 8-bit personal home computer released in the United Kingdom in 1982 by Sinclair Research. It was manufactured in Dundee, Scotland, in the now closed Timex factory.*
