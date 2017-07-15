@@ -14,4 +14,4 @@ date: 2017-07-14 23:27:42 -0700
 
 *The <a href="https://en.wikipedia.org/wiki/ZX_Spectrum" target="_blank">ZX Spectrum</a> is an 8-bit personal home computer released in the United Kingdom in 1982 by Sinclair Research. It was manufactured in Dundee, Scotland, in the now closed Timex factory.*
 
-h/t: [Engadget](https://www.engadget.com/2017/07/13/radiohead-album-hides-an-app-that-only-runs-on-an-80s-computer/)
+h/t: <a href="https://www.engadget.com/2017/07/13/radiohead-album-hides-an-app-that-only-runs-on-an-80s-computer/" target="_blank">Engadget</a>
