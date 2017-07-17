@@ -47,7 +47,7 @@ Following are some rough notes on how I set everything up. You can replicate thi
    
 7. Now you just need to configure the machines on your LAN to use the IP address of this Dingo/Pi-hole box for DNS. I chose to do this for all hosts at once by modifying the DHCP config on my router. I just hand out the IP of this Dingo/Pi-hole box as the primary DNS server, leaving my router/gateway IP as the secondary, just in case the Dingo/Pi-hole box goes offline.
 
-<br/><hr/><br/>
+<hr>
 
 *Here's an optional modification to have the Pi-hole blackhole bad hosts to 0.0.0.0 instead of its default LAN IP. 0.0.0.0 is quicker and more reliable. Using the LAN IP was causing clients to have slow load times at news.google.com and other random sites.*
 
