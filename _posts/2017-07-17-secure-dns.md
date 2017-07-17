@@ -21,14 +21,10 @@ Following are some rough notes on how I set everything up. You can replicate thi
 3. Temporarily run Dingo as follows: ```sudo ./dingo-linux-amd64 -gdns:auto```
 
 4. You'll probably want to setup Dingo to start at boot. I launch it inside tmux, via a single line in ```/etc/rc.local``` like:
-  <pre>
-    <code class="bash">
-      tmux new-session -d -s dingo '/root/dingo-linux-amd64 -gdns:auto'
-    </code>
-  </pre>
+  <pre><code class="bash">tmux new-session -d -s dingo '/root/dingo-linux-amd64 -gdns:auto'</code></pre>
 
-  Then you can easily "attach" to the tmux window to see the output at any time:<p/>
-  ```sudo tmux attach -t dingo```
+  Then you can easily "attach" to the tmux window to see the output at any time:
+  <pre><code class="bash">sudo tmux attach -t dingo</code></pre>
 
 5. I also added a pane to that same tmux window to show the pi-hole log. This works great in the same window since it's already running as root. Although we haven't configured Pi-hole yet, let's go ahead and add the log pane anyway, with something like:<p/>
   ```tail -f /var/log/pihole.log```
