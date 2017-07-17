@@ -18,29 +18,30 @@ Following are some rough notes on how I set everything up. You can replicate thi
 
 2. Install <a href="https://github.com/pforemski/dingo" target="_blank">Dingo</a>
 
-3. Temporarily run Dingo as follows: ```sudo ./dingo-linux-amd64 -gdns:auto```
+3. Temporarily run Dingo as follows:
+   <pre><code class="bash">sudo ./dingo-linux-amd64 -gdns:auto</code></pre>
 
 4. You'll probably want to setup Dingo to start at boot. I launch it inside tmux, via a single line in ```/etc/rc.local``` like:
-  <pre><code class="bash">tmux new-session -d -s dingo '/root/dingo-linux-amd64 -gdns:auto'</code></pre>
+   <pre><code class="bash">tmux new-session -d -s dingo '/root/dingo-linux-amd64 -gdns:auto'</code></pre>
 
-  Then you can easily "attach" to the tmux window to see the output at any time:
-  <pre><code class="bash">sudo tmux attach -t dingo</code></pre>
+   Then you can easily "attach" to the tmux window to see the output at any time:
+   <pre><code class="bash">sudo tmux attach -t dingo</code></pre>
 
-5. I also added a pane to that same tmux window to show the pi-hole log. This works great in the same window since it's already running as root. Although we haven't configured Pi-hole yet, let's go ahead and add the log pane anyway, with something like:<p/>
-  ```tail -f /var/log/pihole.log```
+5. I also added a pane to that same tmux window to show the pi-hole log. This works great in the same window since it's already running as root. Although we haven't configured Pi-hole yet, let's go ahead and add the log pane anyway, with something like:
+   <pre><code class="bash">tail -f /var/log/pihole.log</code></pre>
 
-  Now we can easily see Pi-hole and Dingo output in real-time.
+   Now we can easily see Pi-hole and Dingo output in real-time.
 
-6. Configure Pi-hole to query Dingo instead of your upstream DNS servers. Edit ```/etc/dnsmasq.d/01-pihole.conf``` with something like:<p/>
-  ```sudo vi /etc/dnsmasq.d/01-pihole.conf```
+6. Configure Pi-hole to query Dingo instead of your upstream DNS servers. Edit ```/etc/dnsmasq.d/01-pihole.conf``` with something like:
+   <pre><code class="bash">sudo vi /etc/dnsmasq.d/01-pihole.conf</code></pre>
 
-  Add the first line, comment out the other two; it should look like:
+   Add the first line, comment out the other two; it should look like:
 
-  ```server=127.0.0.1#32000```<p/>
-  ```#server=8.8.8.8```<p/>
-  ```#server=8.8.4.4```
+   <pre><code class="bash">server=127.0.0.1#32000
+   #server=8.8.8.8
+   #server=8.8.4.4</code></pre>
 
-  (Note: port 32000 is the default port for Dingo.)
+   (Note: port 32000 is the default port for Dingo.)
 
 That should be sufficient. Now you just need to configure the machines on your LAN to use the IP address of this Dingo/Pi-hole box for DNS. I chose to do this for all hosts at once by modifying the DHCP config on my router. I just hand out the IP of this Dingo/Pi-hole box as the primary DNS server, leaving my router/gateway IP as the secondary, just in case the Dingo/Pi-hole box goes offline.
 
