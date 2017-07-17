@@ -4,7 +4,7 @@ title: Secure DNS
 date: 2017-07-17 12:27:21 -0700
 ---
 
-I've been routing all the DNS queries from our house through Google's secure "DNS over HTTPS" service for the past 3 months. It has worked extremely well. It feels good to secure DNS and keep all the sensitive data from the ISP (and from anyone else with a priveledged position on the network).
+I've been routing all the DNS queries from our house through Google's secure "DNS over HTTPS" service for the past 3 months. It has worked extremely well. As Google explains: "Traditional DNS queries and responses are sent over UDP or TCP without encryption. This is vulnerable to eavesdropping and spoofing. DNS-over-HTTPS greatly enhances privacy and security between a client and a recursive resolver, and complements DNSSEC to provide end-to-end authenticated DNS lookups." It feels good to secure DNS and keep all that sensitive data from the ISP (and from anyone else with a priveledged position on the network).
 
 There are a variety of DNS clients that have been created to interface with Google's DNS over HTTPS API; I chose one written in Go called <a href="https://github.com/pforemski/dingo" target="_blank">Dingo</a>.
 
