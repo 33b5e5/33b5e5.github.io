@@ -4,11 +4,11 @@ title: Secure DNS
 date: 2017-07-17 12:27:21 -0700
 ---
 
-I've been routing all the DNS queries from our house through Google's secure "DNS over HTTPS" service for the past 3 months. It has worked extremely well. As Google explains: "Traditional DNS queries and responses are sent over UDP or TCP without encryption. This is vulnerable to eavesdropping and spoofing. DNS-over-HTTPS greatly enhances privacy and security between a client and a recursive resolver, and complements DNSSEC to provide end-to-end authenticated DNS lookups." It feels good to secure DNS and keep all that sensitive data from the ISP (and from anyone else with a priveledged position on the network).
+I've been routing all the DNS queries from our house through Google's secure "DNS over HTTPS" service for the past 3 months. It has worked extremely well. As Google explains: "Traditional DNS queries and responses are sent over UDP or TCP without encryption. This is vulnerable to eavesdropping and spoofing. DNS-over-HTTPS greatly enhances privacy and security between a client and a recursive resolver, and complements DNSSEC to provide end-to-end authenticated DNS lookups." It feels good to secure DNS and keep all that sensitive data from the ISP (and from anyone else with a privileged position on the network).
 
 There are a variety of DNS clients that have been created to interface with Google's DNS over HTTPS API; I chose one written in Go called <a href="https://github.com/pforemski/dingo" target="_blank">Dingo</a>.
 
-For enhanced performance, I wanted to also use <a href="http://www.thekelleys.org.uk/dnsmasq/doc.html" target="_blank">dnsmasq</a>. I hoped to place it in front of Dingo, since dnsmasq provides a local cache, preventing unncessary lookups to Google for common records.
+For enhanced performance, I wanted to also use <a href="http://www.thekelleys.org.uk/dnsmasq/doc.html" target="_blank">dnsmasq</a>. I hoped to place it in front of Dingo, since dnsmasq provides a local cache, preventing unnecessary lookups to Google for common records.
 
 However, instead of using vanilla dnsmasq, I decided to use the popular <a href="https://pi-hole.net/" target="_blank">Pi-hole</a> software. Pi-hole provides some additional features on top of dnsmasq, such as network-level ad-blocking, easy whitelist/blacklist capability, and a nice dashboard.
 
@@ -57,4 +57,6 @@ Look for the function "gravity_hostFormat()" (currently at line 302), and modify
 #cat ${piholeDir}/${eventHorizon} | awk -v ipv4addr="$IPV4_ADDRESS" '{sub(/\r$/,""); print ipv4addr" "$0}' >> ${piholeDir}/${accretionDisc}
 cat ${piholeDir}/${eventHorizon} | awk -v ipv4addr="0.0.0.0" '{sub(/\r$/,""); print ipv4addr" "$0}' >> ${piholeDir}/${accretionDisc}</code></pre>
 
-Unfortunately both edits to ```/etc/dnsmasq.d/01-pihole.conf``` and ```/opt/pihole/gravity.sh``` will be lost when the Pi-hole software is updated, so you'll want to avoid manually updating Pi-hole, or keeps these notes handy.
+<hr>
+
+Unfortunately, edits to ```/etc/dnsmasq.d/01-pihole.conf``` and ```/opt/pihole/gravity.sh``` will be lost when the Pi-hole software is updated, so you'll want to avoid manually updating Pi-hole, or keep these notes handy.
