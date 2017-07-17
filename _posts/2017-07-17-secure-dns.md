@@ -43,17 +43,21 @@ Following are some rough notes on how I set everything up. You can replicate thi
 
    (Note: port 32000 is the default port for Dingo.)
 
-That should be sufficient. Now you just need to configure the machines on your LAN to use the IP address of this Dingo/Pi-hole box for DNS. I chose to do this for all hosts at once by modifying the DHCP config on my router. I just hand out the IP of this Dingo/Pi-hole box as the primary DNS server, leaving my router/gateway IP as the secondary, just in case the Dingo/Pi-hole box goes offline.
+   That should be sufficient.
+   
+7. Now you just need to configure the machines on your LAN to use the IP address of this Dingo/Pi-hole box for DNS. I chose to do this for all hosts at once by modifying the DHCP config on my router. I just hand out the IP of this Dingo/Pi-hole box as the primary DNS server, leaving my router/gateway IP as the secondary, just in case the Dingo/Pi-hole box goes offline.
+
+<br>
 
 *Here's an optional modification to have the Pi-hole blackhole bad hosts to 0.0.0.0 instead of its default LAN IP. 0.0.0.0 is quicker and more reliable. Using the LAN IP was causing clients to have slow load times at news.google.com and other random sites.*
 
-<pre><code class="bash">sudo vi /opt/pihole/gravity.sh</code></pre>
+  <pre><code class="bash">sudo vi /opt/pihole/gravity.sh</code></pre>
 
 Look for the function "gravity_hostFormat()" (currently at line 302), and modify it like:
 
-<pre><code class="bash"># Only IPv4
-# First line is the original, second line is modified to use 0.0.0.0 for blocking.
-#cat ${piholeDir}/${eventHorizon} | awk -v ipv4addr="$IPV4_ADDRESS" '{sub(/\r$/,""); print ipv4addr" "$0}' >> ${piholeDir}/${accretionDisc}
-cat ${piholeDir}/${eventHorizon} | awk -v ipv4addr="0.0.0.0" '{sub(/\r$/,""); print ipv4addr" "$0}' >> ${piholeDir}/${accretionDisc}</code></pre>
+  <pre><code class="bash"># Only IPv4
+  # First line is the original, second line is modified to use 0.0.0.0 for blocking.
+  #cat ${piholeDir}/${eventHorizon} | awk -v ipv4addr="$IPV4_ADDRESS" '{sub(/\r$/,""); print ipv4addr" "$0}' >> ${piholeDir}/${accretionDisc}
+  cat ${piholeDir}/${eventHorizon} | awk -v ipv4addr="0.0.0.0" '{sub(/\r$/,""); print ipv4addr" "$0}' >> ${piholeDir}/${accretionDisc}</code></pre>
 
 Unfortunately both edits to ```/etc/dnsmasq.d/01-pihole.conf``` and ```/opt/pihole/gravity.sh``` will be lost when the Pi-hole software is updated, so you'll want to avoid manually updating Pi-hole, or keeps these notes handy.
