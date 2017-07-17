@@ -32,10 +32,7 @@ Following are some rough notes on how I set everything up. You can replicate thi
 
    Now we can easily see Pi-hole and Dingo output in real-time.
 
-6. Configure Pi-hole to query Dingo instead of your upstream DNS servers. Edit ```/etc/dnsmasq.d/01-pihole.conf``` with something like:
-   <pre><code class="bash">sudo vi /etc/dnsmasq.d/01-pihole.conf</code></pre>
-
-   Add the first line, comment out the other two; it should look like:
+6. Configure Pi-hole to query Dingo instead of your upstream DNS servers. Edit ```/etc/dnsmasq.d/01-pihole.conf```. Add the first line and comment out the other two like:
 
    <pre><code class="bash">server=127.0.0.1#32000
    #server=8.8.8.8
