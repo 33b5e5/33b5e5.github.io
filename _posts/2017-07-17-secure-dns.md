@@ -14,14 +14,14 @@ However, instead of using vanilla dnsmasq, I decided to use the popular <a href=
 
 Following are some rough notes on how I set everything up. You can replicate this setup on any old Linux box on your local network. A Raspberry Pi is sufficient.
 
-- Install <a href="https://pi-hole.net/" target="_blank">Pi-hole</a>
+1. Install <a href="https://pi-hole.net/" target="_blank">Pi-hole</a>
 
-- Install <a href="https://github.com/pforemski/dingo" target="_blank">Dingo</a>
+2. Install <a href="https://github.com/pforemski/dingo" target="_blank">Dingo</a>
 
-- Temporarily run Dingo as follows: ```sudo ./dingo-linux-amd64 -gdns:auto```
+3. Temporarily run Dingo as follows: ```sudo ./dingo-linux-amd64 -gdns:auto```
 
 - You'll probably want to setup Dingo to start at boot. I launch it inside tmux, via a single line in ```/etc/rc.local``` like:
-  <p>```tmux new-session -d -s dingo '/root/dingo-linux-amd64 -gdns:auto'```</p>
+  ~~~~tmux new-session -d -s dingo '/root/dingo-linux-amd64 -gdns:auto'~~~~
 
   Then you can easily "attach" to the tmux window to see the output at any time:<p/>
   ```sudo tmux attach -t dingo```
