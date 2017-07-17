@@ -20,8 +20,8 @@ Following are some rough notes on how I set everything up. You can replicate thi
 
 - Temporarily run Dingo as follows: ```sudo ./dingo-linux-amd64 -gdns:auto```
 
-- You'll probably want to setup Dingo to start at boot. I launch it inside tmux, via a single line in ```/etc/rc.local``` like:<p/>
-  ```tmux new-session -d -s dingo '/root/dingo-linux-amd64 -gdns:auto'```
+- You'll probably want to setup Dingo to start at boot. I launch it inside tmux, via a single line in ```/etc/rc.local``` like:
+  <p>```tmux new-session -d -s dingo '/root/dingo-linux-amd64 -gdns:auto'```</p>
 
   Then you can easily "attach" to the tmux window to see the output at any time:<p/>
   ```sudo tmux attach -t dingo```
