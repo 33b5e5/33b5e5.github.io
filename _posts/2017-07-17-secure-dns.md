@@ -39,8 +39,6 @@ Following are some rough notes on how I set everything up. You can replicate thi
    #server=8.8.4.4</code></pre>
 
    *Note: port 32000 is the default port for Dingo.*
-
-   That should be sufficient.
    
 7. Now you just need to configure the machines on your LAN to use the IP address of this Dingo/Pi-hole box for DNS. I chose to do this for all hosts at once by modifying the DHCP config on my router. I just hand out the IP of this Dingo/Pi-hole box as the primary DNS server, leaving my router/gateway IP as the secondary, just in case the Dingo/Pi-hole box goes offline.
 
