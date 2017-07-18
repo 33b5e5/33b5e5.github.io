@@ -46,11 +46,11 @@ Following are some rough notes on how I set everything up. You can replicate thi
 
 <hr>
 
-*Here's an optional modification to have the Pi-hole blackhole bad hosts to ```0.0.0.0``` instead of its default LAN IP. Using ```0.0.0.0``` is quicker and more reliable. In my experience, using the LAN IP was caused clients to have slow load times at news.google.com and other sites.*
+Here's an optional modification to have the Pi-hole blackhole bad hosts to ```0.0.0.0``` instead of its default LAN IP. Using ```0.0.0.0``` was quicker and more reliable; the LAN IP caused clients to experience slow load times at news.google.com and other sites.
 
 <pre><code class="bash">sudo vi /opt/pihole/gravity.sh</code></pre>
 
-Look for the function "gravity_hostFormat()" (currently at line 302), and modify it like:
+Search for the function "gravity_hostFormat()" (currently at line 302), and modify it like:
 
 <pre><code class="bash"># Only IPv4
 # First line is the original, second line is modified to use 0.0.0.0 for blocking.
@@ -59,4 +59,4 @@ cat ${piholeDir}/${eventHorizon} | awk -v ipv4addr="0.0.0.0" '{sub(/\r$/,""); pr
 
 <hr>
 
-Unfortunately, edits to ```/etc/dnsmasq.d/01-pihole.conf``` and ```/opt/pihole/gravity.sh``` will be lost when the Pi-hole software is updated, so you'll want to avoid manually updating Pi-hole, or keep these notes handy.
+*Unfortunately, edits to ```/etc/dnsmasq.d/01-pihole.conf``` and ```/opt/pihole/gravity.sh``` will be lost when the Pi-hole software is updated, so you'll want to avoid manually updating Pi-hole, or keep these notes handy.*
