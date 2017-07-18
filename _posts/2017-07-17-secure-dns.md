@@ -38,7 +38,7 @@ Following are some rough notes on how I set everything up. You can replicate thi
    #server=8.8.8.8
    #server=8.8.4.4</code></pre>
 
-   (Note: port 32000 is the default port for Dingo.)
+   *Note: port 32000 is the default port for Dingo.*
 
    That should be sufficient.
    
