@@ -14,9 +14,9 @@ However, instead of using vanilla dnsmasq, I decided to use the popular <a href=
 
 Following are some rough notes on how I set everything up. You can replicate this setup on any old Linux box on your local network. A Raspberry Pi is sufficient.
 
-1. Install <a href="https://pi-hole.net/" target="_blank">Pi-hole</a>
+1. Install <a href="https://github.com/pi-hole/pi-hole#alternative-semi-automated-install-methods" target="_blank">Pi-hole</a>
 
-2. Install <a href="https://github.com/pforemski/dingo" target="_blank">Dingo</a>
+2. Install <a href="https://github.com/pforemski/dingo#quick-start" target="_blank">Dingo</a>
 
 3. Temporarily run Dingo as follows:
    <pre><code class="bash">sudo ./dingo-linux-amd64 -gdns:auto</code></pre>
