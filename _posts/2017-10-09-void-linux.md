@@ -26,7 +26,7 @@ The underlying approach to managing services is genius. Basically, it's just sym
 
 ![void3.png](https://raw.githubusercontent.com/33b5e5/33b5e5.github.io/master/_images/void3.png)
 
-Let's take a look at a service configuration in /etc/sv. Here I've created a new service configuration for NTPd. It's basically one line of Bash. It execs ntpd as the ntpd user. That's it.
+Let's take a look at a service configuration in /etc/sv. Here I've created a new service configuration for ntpd (network time protocol). It's basically one line of Bash. It execs ntpd as the ntpd user. That's it.
 
 ![void4.png](https://raw.githubusercontent.com/33b5e5/33b5e5.github.io/master/_images/void4.png)
 
@@ -34,6 +34,6 @@ With that in place, all you need to do is create a symlink in /var/service, and 
 
 I'll definitely be keeping an eye on Void Linux. I absolutely love runit. It's such a nice anecdote to the over-engineered complexity of systemd, the init system used my the majority of popular distributions.
 
-Unfortunately there are some chicken-and-egg issues preventing me from using Void in production systems. Namely, it's not available as an install target on any of the hosting/VPS providers I use. I had to create a custom ISO image in order to install it on a VPS (custom ISOs are a nice feature over at <a href="https://www.vultr.com/" target="_blank">Vultr</a>, my favorite host for VPS nodes). Void also suffers from a lack of adoption (and a resulting lack of community support) at this early stage. Try Googling for solutions to problems with Void, and you'll probably be disappointed. Nonetheless, these problems should wane as time goes on and more people start to use Void.
+Unfortunately there are some chicken-and-egg issues preventing me from using Void in production systems. Namely, it's not available as an install target on any of the hosting providers I use. I had to create a custom ISO image in order to install it on a VPS (custom ISOs are a nice feature over at <a href="https://www.vultr.com/" target="_blank">Vultr</a>, my favorite VPS host). Void also suffers from a lack of adoption (and a resulting lack of community support) at this early stage. Try Googling for solutions to problems with Void, and you'll probably be disappointed. Nonetheless, these problems should wane as time goes on and more people start to use Void.
 
-I'd encourage anyone interested in a new approach to <a href="https://www.voidlinux.eu/download/" target="_blank">check it out</a>!
+I'd encourage anyone interested in a new approach to Linux to <a href="https://www.voidlinux.eu/download/" target="_blank">check it out</a>!
