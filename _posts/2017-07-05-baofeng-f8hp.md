@@ -10,4 +10,4 @@ Interestingly it also has the ability to transmit "touch tones" (DTMF) using the
 
 Despite its widespread availability, the BF-F8HP is technically out of spec in the US, and certain uses of this radio may be against FCC regulations (including out-of-spec or over-powered transmissions, not to mention hacking air-raid sirens).
 
-I'm using it to receive RF transmissions in the area, and to expirement with the intersection of modern tech and older analog RF tech.
+I'm using it to receive RF transmissions in the area, and to experiment with the intersection of modern tech and older analog RF tech.
