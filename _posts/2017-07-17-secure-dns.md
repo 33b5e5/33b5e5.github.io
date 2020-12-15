@@ -8,7 +8,7 @@ I've been routing all the DNS queries from our house through Google's secure "DN
 
 There are a variety of DNS clients that have been created to interface with Google's DNS over HTTPS API; I chose one written in Go called <a href="https://github.com/pforemski/dingo" target="_blank">Dingo</a>.
 
-For enhanced performance, I wanted to also use <a href="http://www.thekelleys.org.uk/dnsmasq/doc.html" target="_blank">dnsmasq</a>. I hoped to place it in front of Dingo, since dnsmasq provides a local cache, preventing unnecessary lookups to Google for common records.
+For enhanced performance, I wanted to also use <a href="https://en.wikipedia.org/wiki/Dnsmasq" target="_blank">dnsmasq</a>. I hoped to place it in front of Dingo, since dnsmasq provides a local cache, preventing unnecessary lookups to Google for common records.
 
 However, instead of using vanilla dnsmasq, I decided to use the popular <a href="https://pi-hole.net/" target="_blank">Pi-hole</a> software. Pi-hole provides some additional features on top of dnsmasq, such as network-level ad-blocking, easy whitelist/blacklist capability, and a nice dashboard.
 
