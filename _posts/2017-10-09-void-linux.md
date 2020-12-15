@@ -6,7 +6,7 @@ date: 2017-10-09 15:22:23 -0700
 
 I've been testing <a href="https://www.voidlinux.eu/" target="_blank">Void Linux</a> recently, and thought I'd take a few minutes to write about my experience. Void is an independent, open source Linux distribution with a unique package manager and an init system written from scratch. The Github repo is <a href="https://github.com/voidlinux" target="_blank">here</a>.
 
-Void uses a "rolling release" strategy; there are no specific releases or versions. You can update packages daily or whenever you chose, and you'll always get the latest code. They use a <a href="http://build.voidlinux.eu/" target="_blank">continuous build system</a> to produce packages as soon as changes are pushed.
+Void uses a "rolling release" strategy; there are no specific releases or versions. You can update packages daily or whenever you chose, and you'll always get the latest code. They use a continuous build system to produce packages as soon as changes are pushed.
 
 Void's new package manager is called *xbps*. I had no trouble picking up the syntax, and it seemed to handle dependencies and do everything else you'd expect a modern package manager to do, but I didn't find it particularly notable or exceptional. The purported benefits are outlined <a href="https://github.com/voidlinux/xbps/blob/master/README.md" target="_blank">here</a>.
 
