@@ -12,23 +12,23 @@ Void's new package manager is called *xbps*. I had no trouble picking up the syn
 
 Where Void Linux really shines, and by far my favorite thing about it, is the init system, *runit* ("run it"). You can read more about runit <a href="https://www.voidlinux.eu/usage/runit/" target="_blank">here</a>. Sometimes a screencap is worth a thousand words:
 
-![void1.png](https://raw.githubusercontent.com/33b5e5/33b5e5.github.io/master/_images/void1.png)
+![void1.png](https://raw.githubusercontent.com/33b5e5/33b5e5.github.io/main/_images/void1.png)
 
 That's the running process tree from my Void Linux system. That's it! That's all that is running on my system. Admire the simplicity. I can explain what every process is doing there. Try that on a fresh install of Ubuntu!
 
 As a result, the OS itself has a remarkably small footprint:
 
-![void2.png](https://raw.githubusercontent.com/33b5e5/33b5e5.github.io/master/_images/void2.png)
+![void2.png](https://raw.githubusercontent.com/33b5e5/33b5e5.github.io/main/_images/void2.png)
 
 The system is only using 33 MB of RAM. Incredible!
 
 The underlying approach to managing services is genius. Basically, it's just symlinks. If you look at the directory /var/service, you can see which services are enabled. If there's a symlink there to an existing service in /etc/sv, that service will start at boot (and continue running under the management of runit). Need to disable a service? Just delete the symlink!
 
-![void3.png](https://raw.githubusercontent.com/33b5e5/33b5e5.github.io/master/_images/void3.png)
+![void3.png](https://raw.githubusercontent.com/33b5e5/33b5e5.github.io/main/_images/void3.png)
 
 Let's take a look at a service configuration in /etc/sv. Here we've created a new service configuration for ntpd (network time protocol). It's basically one line of Bash. It execs ntpd as the ntpd user. That's it.
 
-![void4.png](https://raw.githubusercontent.com/33b5e5/33b5e5.github.io/master/_images/void4.png)
+![void4.png](https://raw.githubusercontent.com/33b5e5/33b5e5.github.io/main/_images/void4.png)
 
 With that in place, all you need to do is create a symlink in /var/service, and you're done.
 

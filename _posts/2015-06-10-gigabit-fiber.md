@@ -4,7 +4,7 @@ title: Gigabit Fiber
 date: 2015-06-10 16:20:42 -0700
 ---
 
-![gigabits.jpg](https://raw.githubusercontent.com/33b5e5/33b5e5.github.io/master/_images/gigabits.jpg)
+![gigabits.jpg](https://raw.githubusercontent.com/33b5e5/33b5e5.github.io/main/_images/gigabits.jpg)
 
 Gigabit fiber. :)
 
